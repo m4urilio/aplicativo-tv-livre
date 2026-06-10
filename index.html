@@ -3,17 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aplicativo TV Livre — Descubra o Melhor Streaming</title>
+<title>Aplicativo TV Livre — O Melhor App de Streaming do Brasil</title>
 
 <!-- Favicon: TV icon blue noir -->
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23000'/><rect x='10' y='18' width='44' height='28' rx='4' fill='none' stroke='%233B82F6' stroke-width='3'/><rect x='24' y='46' width='16' height='4' rx='2' fill='%23EF233C'/><polygon points='27,26 27,38 39,32' fill='%23FF6B6B'/></svg>">
 
-<!-- Performance: no render-blocking resources -->
-<!-- LCP is text-based (hero h1) — renders from inline CSS instantly -->
+<!-- Preconnect: third-party origins used on this page -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://scripts.converteai.net" crossorigin>
+<link rel="preconnect" href="https://cdn.converteai.net" crossorigin>
+<link rel="preconnect" href="https://connect.facebook.net" crossorigin>
+<link rel="dns-prefetch" href="https://cdn.utmify.com.br">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&display=swap"></noscript>
 
 <!-- Tracking: async/deferred — never blocks render -->
-<!-- Meta Pixel — async -->
-<script async>
+<!-- Meta Pixel -->
+<script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -22,12 +29,21 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', 'SEU_PIXEL_ID');
+fbq('init', '1454738093000538');
 fbq('track', 'PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
-<!-- Utmify -->
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1454738093000538&ev=PageView&noscript=1"/></noscript>
+<!-- Utmify UTMs -->
 <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
+<!-- Utmify Pixel -->
+<script>
+  window.pixelId = "6a1240b1880502db2f2dc381";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
 
 <style>
 /* ── RESET & TOKENS ── */
@@ -88,7 +104,8 @@ nav{
   display:flex;align-items:center;justify-content:space-between;
 }
 .logo{
-  font-size:1.1rem;font-weight:800;letter-spacing:-.3px;
+  font-family:'Barlow Condensed','Segoe UI',system-ui,sans-serif;
+  font-size:1.4rem;font-weight:800;letter-spacing:.5px;text-transform:uppercase;
   background:linear-gradient(135deg,var(--blue),var(--cyan));
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;
   background-clip:text;
@@ -146,10 +163,12 @@ nav{
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
 
 .hero h1{
-  font-size:clamp(2.4rem,7vw,5rem);
-  font-weight:900;line-height:1.05;
-  letter-spacing:-1.5px;
+  font-family:'Barlow Condensed','Segoe UI',system-ui,sans-serif;
+  font-size:clamp(3rem,9vw,6.5rem);
+  font-weight:800;line-height:1;
+  letter-spacing:0px;
   margin-bottom:24px;
+  text-transform:uppercase;
 }
 .hero h1 .hi{
   background:linear-gradient(135deg,var(--blue),var(--cyan));
@@ -226,8 +245,10 @@ nav{
   margin-bottom:14px;
 }
 .section-title{
-  font-size:clamp(1.6rem,4vw,2.6rem);
-  font-weight:900;line-height:1.1;letter-spacing:-.5px;
+  font-family:'Barlow Condensed','Segoe UI',system-ui,sans-serif;
+  font-size:clamp(2rem,5vw,3.4rem);
+  font-weight:800;line-height:1.05;letter-spacing:.5px;
+  text-transform:uppercase;
   margin-bottom:48px;
 }
 .section-title span{
@@ -271,8 +292,9 @@ nav{
   font-size:1.4rem;margin-bottom:18px;
 }
 .feat-title{
-  font-size:1rem;font-weight:800;
-  margin-bottom:10px;letter-spacing:-.2px;
+  font-family:'Barlow Condensed','Segoe UI',system-ui,sans-serif;
+  font-size:1.2rem;font-weight:800;
+  margin-bottom:10px;letter-spacing:.3px;text-transform:uppercase;
 }
 .feat-desc{font-size:.88rem;color:var(--muted);line-height:1.65}
 
@@ -296,8 +318,10 @@ nav{
   filter:blur(60px);pointer-events:none;
 }
 .cta-card h2{
-  font-size:clamp(1.6rem,4vw,2.4rem);
-  font-weight:900;margin-bottom:16px;letter-spacing:-.5px;
+  font-family:'Barlow Condensed','Segoe UI',system-ui,sans-serif;
+  font-size:clamp(2rem,5vw,3rem);
+  font-weight:800;margin-bottom:16px;letter-spacing:.5px;
+  text-transform:uppercase;
 }
 .cta-card p{
   color:var(--muted);font-size:1rem;
@@ -306,7 +330,7 @@ nav{
 
 .btn-whatsapp{
   display:inline-flex;align-items:center;gap:12px;
-  background:#25D366;color:#000;
+  background:#25D366;color:#fff;
   font-size:1rem;font-weight:800;
   padding:16px 36px;border-radius:12px;
   text-decoration:none;
@@ -319,6 +343,82 @@ nav{
   transform:translateY(-2px);
 }
 .btn-whatsapp svg{flex-shrink:0}
+
+/* ── TESTIMONIALS ── */
+.testimonials-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+.testi-card{
+  background:var(--glass);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:28px 24px;
+  backdrop-filter:blur(12px);
+  position:relative;
+}
+.testi-card::before{
+  content:'';position:absolute;
+  top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(239,35,60,0.5),transparent);
+}
+.testi-stars{
+  color:#EF233C;font-size:.9rem;
+  letter-spacing:2px;margin-bottom:14px;
+}
+.testi-text{
+  font-size:.9rem;color:#cbd5e1;line-height:1.65;
+  margin-bottom:20px;font-style:italic;
+}
+.testi-author{
+  display:flex;align-items:center;gap:10px;
+}
+.testi-avatar{
+  width:36px;height:36px;border-radius:50%;
+  background:linear-gradient(135deg,rgba(239,35,60,0.3),rgba(192,57,43,0.2));
+  border:1px solid var(--border-b);
+  display:flex;align-items:center;justify-content:center;
+  font-size:.85rem;font-weight:800;color:var(--blue2);
+  flex-shrink:0;
+}
+.testi-name{font-size:.85rem;font-weight:700}
+.testi-location{font-size:.75rem;color:var(--muted)}
+
+/* ── FAQ ── */
+.faq-list{display:flex;flex-direction:column;gap:10px;max-width:780px;margin:0 auto}
+details.faq-item{
+  background:var(--glass);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  backdrop-filter:blur(12px);
+  overflow:hidden;
+  transition:border-color .2s;
+}
+details.faq-item[open]{border-color:var(--border-b)}
+details.faq-item summary{
+  padding:20px 24px;
+  font-size:.95rem;font-weight:700;
+  cursor:pointer;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  list-style:none;
+  user-select:none;
+}
+details.faq-item summary::-webkit-details-marker{display:none}
+details.faq-item summary::after{
+  content:'+';
+  font-size:1.3rem;font-weight:400;color:var(--blue2);
+  flex-shrink:0;transition:transform .2s;
+}
+details.faq-item[open] summary::after{transform:rotate(45deg)}
+.faq-body{
+  padding:0 24px 20px;
+  font-size:.88rem;color:var(--muted);line-height:1.7;
+}
+
+@media(max-width:768px){
+  .testimonials-grid{grid-template-columns:1fr}
+}
 
 /* ── FOOTER ── */
 footer{
@@ -338,6 +438,26 @@ footer{
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;
   background-clip:text;
 }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeSlideUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeSlideDown{from{opacity:0;transform:translateY(-18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+/* Hero — load-triggered, staggered */
+.hero-badge{animation:fadeSlideDown .55s cubic-bezier(.22,1,.36,1) both;animation-delay:.1s}
+.hero h1{animation:fadeSlideUp .7s cubic-bezier(.22,1,.36,1) both;animation-delay:.28s}
+.hero-desc{animation:fadeSlideUp .65s cubic-bezier(.22,1,.36,1) both;animation-delay:.46s}
+.hero .btn-whatsapp{animation:fadeSlideUp .6s cubic-bezier(.22,1,.36,1) both;animation-delay:.6s}
+.hero-sub{animation:fadeIn .5s ease both;animation-delay:.8s}
+
+/* Scroll-reveal base state */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .65s cubic-bezier(.22,1,.36,1),transform .65s cubic-bezier(.22,1,.36,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+/* Stagger for feature cards */
+.feat-card.reveal:nth-child(2){transition-delay:.1s}
+.feat-card.reveal:nth-child(3){transition-delay:.2s}
+.feat-card.reveal:nth-child(4){transition-delay:.3s}
 
 /* ── RESPONSIVE ── */
 @media(max-width:768px){
@@ -361,7 +481,7 @@ footer{
 <nav>
   <div class="nav-inner">
     <div class="logo">📺 TV Livre</div>
-    <a href="https://wa.me/SEU_NUMERO" class="nav-cta" target="_blank" rel="noopener">Falar no WhatsApp</a>
+    <a href="https://pay.wiapy.com/qrfJO0I0Fq" class="nav-cta" target="_blank" rel="noopener">EU QUERO!</a>
   </div>
 </nav>
 
@@ -373,27 +493,34 @@ footer{
       Streaming Premium
     </div>
     <h1>
-      Descubra o<br>
-      <span class="hi">Melhor Streaming</span>
+      Foi lançado o<br>
+      <span class="hi">Melhor App de Streaming</span><br>
+      do Brasil
     </h1>
     <p class="hero-desc">
       Acesso ilimitado aos melhores conteúdos de TV, filmes e séries.<br>
       Qualidade premium com a melhor experiência.
     </p>
-    <a href="https://wa.me/SEU_NUMERO" class="btn-primary" target="_blank" rel="noopener">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 11.5C3 6.806 6.806 3 11.5 3S20 6.806 20 11.5c0 1.622-.44 3.14-1.207 4.44L20 21l-5.06-1.207A8.5 8.5 0 1 1 3 11.5z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-      Quero Testar Agora
-    </a>
-    <p class="hero-sub">
-      <span class="wa-dot"></span>
-      Fale conosco no WhatsApp &mdash; Resposta em minutos
-    </p>
+    <div style="width:100%;max-width:500px;margin:0 auto 32px;overflow:hidden">
+      <div style="position:relative;width:100%;max-width:400px;margin:0 auto;aspect-ratio:9/16;min-height:500px">
+        <vturb-smartplayer id="vid-6a233278f53a385af30b5ff0" style="position:absolute;inset:0;width:100%;height:100%;"></vturb-smartplayer>
+      </div>
+      <script type="text/javascript">var s=document.createElement("script");s.src="https://scripts.converteai.net/b9d30288-b08d-4238-b225-90cb50766f0d/players/6a233278f53a385af30b5ff0/v4/player.js",s.async=!0,document.head.appendChild(s);</script>
+    </div>
+    <div style="display:inline-flex;flex-direction:column;align-items:center;gap:10px">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-size:.9rem;font-weight:600;text-decoration:line-through;color:var(--muted)">R$ 97,00</span>
+        <span style="font-size:1.4rem;font-weight:900;color:#fff">R$ 9,99</span>
+      </div>
+      <a href="https://pay.wiapy.com/qrfJO0I0Fq" class="btn-whatsapp" target="_blank" rel="noopener">EU QUERO!</a>
+      <span style="font-size:.75rem;color:#25D366;font-weight:600;letter-spacing:.2px">* não é mensalidade!</span>
+    </div>
   </div>
 </section>
 
 <!-- STATS -->
 <div class="stats">
-  <div class="stats-inner">
+  <div class="stats-inner reveal">
     <div class="stat-item">
       <div class="stat-value">+95 mil</div>
       <div class="stat-label">Conteúdos</div>
@@ -412,25 +539,25 @@ footer{
 <!-- FEATURES -->
 <section class="features">
   <div class="container">
-    <div class="section-tag">Por que nos escolher</div>
-    <h2 class="section-title">Por que escolher o<br><span>Aplicativo TV Livre?</span></h2>
+    <div class="section-tag reveal">Por que nos escolher</div>
+    <h2 class="section-title reveal">Por que escolher o<br><span>Aplicativo TV Livre?</span></h2>
     <div class="features-grid">
-      <div class="feat-card">
+      <div class="feat-card reveal">
         <div class="feat-icon">🎬</div>
         <div class="feat-title">Conteúdo Premium</div>
         <p class="feat-desc">Acesso a milhares de filmes, séries e programas exclusivos em alta qualidade.</p>
       </div>
-      <div class="feat-card">
+      <div class="feat-card reveal">
         <div class="feat-icon">⚡</div>
         <div class="feat-title">Sem Travamentos</div>
         <p class="feat-desc">Streaming fluido e sem interrupções. Qualidade adaptável à sua conexão.</p>
       </div>
-      <div class="feat-card">
+      <div class="feat-card reveal">
         <div class="feat-icon">👥</div>
         <div class="feat-title">Múltiplos Perfis</div>
         <p class="feat-desc">Escolha a quantidade de telas que deseja contratar e veja os planos disponíveis para você.</p>
       </div>
-      <div class="feat-card">
+      <div class="feat-card reveal">
         <div class="feat-icon">📱</div>
         <div class="feat-title">Compatível com Tudo</div>
         <p class="feat-desc">Funciona em Smart TV, TV Box, Fire Stick, celulares e tablets. Assista em qualquer lugar.</p>
@@ -439,16 +566,92 @@ footer{
   </div>
 </section>
 
+<!-- TESTIMONIALS -->
+<section class="features">
+  <div class="container">
+    <div class="section-tag reveal">Depoimentos</div>
+    <h2 class="section-title reveal">O que nossos <span>clientes dizem</span></h2>
+    <div class="testimonials-grid">
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Assisto em 3 telas ao mesmo tempo com qualidade incrível. Nunca mais paguei caro por streaming. Melhor investimento que fiz!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar">CM</div>
+          <div>
+            <div class="testi-name">Carlos M.</div>
+            <div class="testi-location">São Paulo, SP</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Funciona no Fire Stick, no celular e na Smart TV. Sem travamento nenhum. Vale muito os R$ 9,99, recomendo pra toda família!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar">AP</div>
+          <div>
+            <div class="testi-name">Ana Paula S.</div>
+            <div class="testi-location">Belo Horizonte, MG</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"O suporte respondeu em menos de 5 minutos e me ajudou a configurar tudo. Aplicativo top, já indiquei pra mais de 10 pessoas!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar">RF</div>
+          <div>
+            <div class="testi-name">Ricardo F.</div>
+            <div class="testi-location">Curitiba, PR</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="features">
+  <div class="container">
+    <div class="section-tag reveal" style="display:block;text-align:center">Dúvidas Frequentes</div>
+    <h2 class="section-title reveal" style="text-align:center">Perguntas <span>Frequentes</span></h2>
+    <div class="faq-list reveal">
+      <details class="faq-item">
+        <summary>O que é o Aplicativo TV Livre?</summary>
+        <p class="faq-body">É um serviço de streaming completo com acesso a mais de 95 mil conteúdos: canais ao vivo, filmes, séries, esportes e muito mais — tudo em alta qualidade, sem contrato.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Como funciona o pagamento?</summary>
+        <p class="faq-body">O pagamento é único, por apenas R$ 9,99. Não existe mensalidade nem renovação automática. Você paga uma vez e aproveita o acesso.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Em quais dispositivos funciona?</summary>
+        <p class="faq-body">Funciona em Smart TVs, TV Box, Amazon Fire Stick, celulares Android e iOS, tablets e computadores. Se tem tela e internet, funciona.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Como recebo o acesso após o pagamento?</summary>
+        <p class="faq-body">Assim que o pagamento é confirmado, você recebe as instruções de acesso em poucos minutos. Nosso suporte está disponível 24 horas por dia.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Tem suporte caso eu tenha alguma dúvida?</summary>
+        <p class="faq-body">Sim! Nosso suporte funciona 24/7. Qualquer dúvida sobre instalação ou configuração, nossa equipe resolve rapidinho.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <section class="cta-section">
   <div class="container">
-    <div class="cta-card">
+    <div class="cta-card reveal">
       <h2>Pronto para começar?</h2>
-      <p>Fale conosco agora e conheça nossos planos. Resposta rápida no WhatsApp!</p>
-      <a href="https://wa.me/SEU_NUMERO" class="btn-whatsapp" target="_blank" rel="noopener">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.987 0C5.373 0 0 5.373 0 11.987c0 2.109.554 4.09 1.523 5.808L0 24l6.384-1.499A11.935 11.935 0 0 0 11.987 24C18.601 24 24 18.627 24 12.013 24 5.373 18.601 0 11.987 0zm.013 21.818a9.83 9.83 0 0 1-5.012-1.37l-.36-.214-3.728.875.892-3.636-.234-.373A9.83 9.83 0 0 1 2.182 12c0-5.42 4.41-9.83 9.818-9.83 5.42 0 9.83 4.41 9.83 9.83 0 5.42-4.41 9.818-9.83 9.818z"/></svg>
-        Conversar no WhatsApp
-      </a>
+      <p>Acesse agora e comece a assistir em minutos. Acesso imediato após o pagamento.</p>
+      <div style="display:inline-flex;flex-direction:column;align-items:center;gap:10px">
+        <div style="display:flex;align-items:center;gap:10px">
+          <span style="font-size:.9rem;font-weight:600;text-decoration:line-through;color:var(--muted)">R$ 97,00</span>
+          <span style="font-size:1.4rem;font-weight:900;color:#fff">R$ 9,99</span>
+        </div>
+        <a href="https://pay.wiapy.com/qrfJO0I0Fq" class="btn-whatsapp" target="_blank" rel="noopener">EU QUERO!</a>
+      </div>
     </div>
   </div>
 </section>
@@ -461,5 +664,21 @@ footer{
   </div>
 </footer>
 
+
+<script>
+(function(){
+  var els = document.querySelectorAll('.reveal');
+  if(!els.length) return;
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  },{threshold:0.12});
+  els.forEach(function(el){ io.observe(el); });
+})();
+</script>
 </body>
 </html>
