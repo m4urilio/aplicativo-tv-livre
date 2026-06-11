@@ -15,8 +15,8 @@
 <link rel="preconnect" href="https://cdn.converteai.net" crossorigin>
 <link rel="preconnect" href="https://connect.facebook.net" crossorigin>
 <link rel="dns-prefetch" href="https://cdn.utmify.com.br">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&display=swap" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&display=swap"></noscript>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;700;800&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;700;800&display=swap"></noscript>
 
 <!-- Tracking: async/deferred — never blocks render -->
 <!-- Meta Pixel -->
@@ -177,7 +177,7 @@ nav{
 }
 
 .hero-desc{
-  font-size:1.05rem;color:var(--muted);
+  font-size:1.15rem;color:var(--muted);font-family:'Barlow Condensed',sans-serif;font-weight:300;
   max-width:560px;margin:0 auto 40px;line-height:1.7;
 }
 
@@ -301,6 +301,7 @@ nav{
 /* ── CTA SECTION ── */
 .cta-section{
   text-align:center;
+  scroll-margin-top:44px;
 }
 .cta-card{
   background:linear-gradient(135deg,rgba(239,35,60,0.1),rgba(192,57,43,0.06));
@@ -432,6 +433,8 @@ footer{
   flex-wrap:wrap;gap:12px;
 }
 .footer-copy{font-size:.78rem;color:var(--muted)}
+.footer-link{background:none;border:none;color:var(--muted);font-size:.78rem;cursor:pointer;text-decoration:underline;text-underline-offset:3px;padding:0;font-family:inherit}
+.footer-link:hover{color:#fff}
 .footer-logo{
   font-size:.95rem;font-weight:800;
   background:linear-gradient(135deg,var(--blue),var(--cyan));
@@ -476,6 +479,15 @@ footer{
 </style>
 </head>
 <body>
+<div id="promo-bar" style="background:#EF233C;color:#fff;text-align:center;padding:10px 16px;font-family:'Segoe UI',sans-serif;font-size:1rem;font-weight:700;letter-spacing:0.04em;position:sticky;top:0;z-index:9999;">
+  EM PROMOÇÃO APENAS ATÉ O DIA <span id="promo-date"></span>
+</div>
+<script>
+  (function(){
+    var now = new Date();
+    document.getElementById('promo-date').textContent = now.getDate() + '/' + (now.getMonth()+1);
+  })();
+</script>
 
 <!-- NAV -->
 <nav>
@@ -498,8 +510,8 @@ footer{
       do Brasil
     </h1>
     <p class="hero-desc">
-      Acesso ilimitado aos melhores conteúdos de TV, filmes e séries.<br>
-      Qualidade premium com a melhor experiência.
+      Acesso imediato a +20.000 canais, 95 mil episódios de séries e filmes,<br>
+      tudo em um aplicativo fácil de instalar e compatível com qualquer TV.
     </p>
     <div style="width:100%;max-width:500px;margin:0 auto 32px;overflow:hidden">
       <div style="position:relative;width:100%;max-width:400px;margin:0 auto;aspect-ratio:9/16;min-height:500px">
@@ -508,12 +520,8 @@ footer{
       <script type="text/javascript">var s=document.createElement("script");s.src="https://scripts.converteai.net/b9d30288-b08d-4238-b225-90cb50766f0d/players/6a233278f53a385af30b5ff0/v4/player.js",s.async=!0,document.head.appendChild(s);</script>
     </div>
     <div style="display:inline-flex;flex-direction:column;align-items:center;gap:10px">
-      <div style="display:flex;align-items:center;gap:10px">
-        <span style="font-size:.9rem;font-weight:600;text-decoration:line-through;color:var(--muted)">R$ 97,00</span>
-        <span style="font-size:1.4rem;font-weight:900;color:#fff">R$ 9,99</span>
-      </div>
-      <a href="https://pay.wiapy.com/qrfJO0I0Fq" class="btn-whatsapp" target="_blank" rel="noopener">EU QUERO!</a>
-      <span style="font-size:.75rem;color:#25D366;font-weight:600;letter-spacing:.2px">* não é mensalidade!</span>
+      <a href="#cta-final" class="btn-whatsapp">EU QUERO!</a>
+      <span style="font-size:1.1rem;color:#25D366;font-weight:700;letter-spacing:.3px;font-family:'Barlow Condensed',sans-serif">PAGAMENTO ÚNICO, SEM MENSALIDADE!</span>
     </div>
   </div>
 </section>
@@ -566,42 +574,41 @@ footer{
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="features">
+<!-- CTA -->
+<section class="cta-section" id="cta-final">
   <div class="container">
-    <div class="section-tag reveal">Depoimentos</div>
-    <h2 class="section-title reveal">O que nossos <span>clientes dizem</span></h2>
-    <div class="testimonials-grid">
-      <div class="testi-card reveal">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"Assisto em 3 telas ao mesmo tempo com qualidade incrível. Nunca mais paguei caro por streaming. Melhor investimento que fiz!"</p>
-        <div class="testi-author">
-          <div class="testi-avatar">CM</div>
-          <div>
-            <div class="testi-name">Carlos M.</div>
-            <div class="testi-location">São Paulo, SP</div>
-          </div>
-        </div>
+    <div class="cta-card reveal">
+      <h2>Pronto para começar?</h2>
+      <p>Acesse agora e comece a assistir em minutos. Acesso imediato após o pagamento.</p>
+      <div style="display:inline-flex;flex-direction:column;align-items:center;gap:6px">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:.95rem;font-weight:700;color:var(--muted);text-decoration:line-through;letter-spacing:.03em">R$ 97,00</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:2.2rem;font-weight:800;color:#fff;letter-spacing:.02em;line-height:1">R$ 9,99</div>
+        <a href="https://pay.wiapy.com/qrfJO0I0Fq" class="btn-whatsapp" target="_blank" rel="noopener" style="margin-top:6px">EU QUERO!</a>
       </div>
-      <div class="testi-card reveal">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"Funciona no Fire Stick, no celular e na Smart TV. Sem travamento nenhum. Vale muito os R$ 9,99, recomendo pra toda família!"</p>
-        <div class="testi-author">
-          <div class="testi-avatar">AP</div>
-          <div>
-            <div class="testi-name">Ana Paula S.</div>
-            <div class="testi-location">Belo Horizonte, MG</div>
+
+      <div style="margin-top:32px;border-top:1px solid rgba(255,255,255,0.1);padding-top:28px;width:100%;max-width:480px;margin-left:auto;margin-right:auto">
+        <h3 style="font-size:1.2rem;font-weight:900;letter-spacing:.05em;color:#fff;text-align:center;margin-bottom:24px">COMO FUNCIONA?</h3>
+        <div style="display:flex;flex-direction:column;gap:16px;text-align:left">
+          <div style="display:flex;align-items:flex-start;gap:14px">
+            <div style="min-width:36px;height:36px;border-radius:50%;background:#EF233C;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.95rem;color:#fff">1</div>
+            <div>
+              <div style="font-weight:700;color:#fff;font-size:.95rem">Finalize o pagamento</div>
+              <div style="color:#94a3b8;font-size:.85rem;margin-top:2px">Pague R$ 9,99 uma única vez — sem mensalidade, sem surpresa.</div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="testi-card reveal">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"O suporte respondeu em menos de 5 minutos e me ajudou a configurar tudo. Aplicativo top, já indiquei pra mais de 10 pessoas!"</p>
-        <div class="testi-author">
-          <div class="testi-avatar">RF</div>
-          <div>
-            <div class="testi-name">Ricardo F.</div>
-            <div class="testi-location">Curitiba, PR</div>
+          <div style="display:flex;align-items:flex-start;gap:14px">
+            <div style="min-width:36px;height:36px;border-radius:50%;background:#EF233C;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.95rem;color:#fff">2</div>
+            <div>
+              <div style="font-weight:700;color:#fff;font-size:.95rem">Receba o acesso e instale o app</div>
+              <div style="color:#94a3b8;font-size:.85rem;margin-top:2px">Em minutos você recebe o link. Instala em qualquer TV — Smart TV, TV Box, Fire Stick, celular ou tablet.</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:14px">
+            <div style="min-width:36px;height:36px;border-radius:50%;background:#EF233C;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.95rem;color:#fff">3</div>
+            <div>
+              <div style="font-weight:700;color:#fff;font-size:.95rem">Assista tudo na hora</div>
+              <div style="color:#94a3b8;font-size:.85rem;margin-top:2px">Filmes, séries, canais ao vivo e esportes. Tudo funcionando em segundos, sem complicação.</div>
+            </div>
           </div>
         </div>
       </div>
@@ -639,30 +646,72 @@ footer{
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta-section">
-  <div class="container">
-    <div class="cta-card reveal">
-      <h2>Pronto para começar?</h2>
-      <p>Acesse agora e comece a assistir em minutos. Acesso imediato após o pagamento.</p>
-      <div style="display:inline-flex;flex-direction:column;align-items:center;gap:10px">
-        <div style="display:flex;align-items:center;gap:10px">
-          <span style="font-size:.9rem;font-weight:600;text-decoration:line-through;color:var(--muted)">R$ 97,00</span>
-          <span style="font-size:1.4rem;font-weight:900;color:#fff">R$ 9,99</span>
-        </div>
-        <a href="https://pay.wiapy.com/qrfJO0I0Fq" class="btn-whatsapp" target="_blank" rel="noopener">EU QUERO!</a>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">📺 Aplicativo TV Livre</div>
     <p class="footer-copy">&copy; 2026 Aplicativo TV Livre. Todos os direitos reservados.</p>
   </div>
+  <div style="margin-top:14px;display:flex;justify-content:center;gap:20px;flex-wrap:wrap">
+    <button class="footer-link" onclick="openModal('termos')">Termos de Uso</button>
+    <button class="footer-link" onclick="openModal('privacidade')">Política de Privacidade</button>
+    <button class="footer-link" onclick="openModal('reembolso')">Política de Reembolso</button>
+    <button class="footer-link" onclick="openModal('contato')">Contato</button>
+  </div>
 </footer>
+
+<!-- MODAIS DE COMPLIANCE -->
+<div id="modal-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:99999;align-items:center;justify-content:center;padding:20px">
+  <div style="background:#1a0505;border:1px solid rgba(239,35,60,.3);border-radius:16px;max-width:560px;width:100%;max-height:80vh;display:flex;flex-direction:column">
+    <div style="padding:24px 24px 0;display:flex;justify-content:space-between;align-items:center">
+      <h3 id="modal-title" style="font-size:1.1rem;font-weight:800;color:#fff"></h3>
+      <button onclick="closeModal()" style="background:none;border:none;color:#94a3b8;font-size:1.4rem;cursor:pointer;line-height:1">&times;</button>
+    </div>
+    <div id="modal-body" style="padding:20px 24px;overflow-y:auto;font-size:.85rem;color:#94a3b8;line-height:1.7"></div>
+    <div style="padding:16px 24px 24px;text-align:center">
+      <button onclick="closeModal()" style="background:#EF233C;color:#fff;border:none;border-radius:50px;padding:12px 40px;font-size:.95rem;font-weight:700;cursor:pointer;font-family:'Barlow Condensed',sans-serif;letter-spacing:.05em">ACEITAR</button>
+    </div>
+  </div>
+</div>
+
+<script>
+var modalContent = {
+  termos: {
+    title: 'Termos de Uso',
+    body: '<p><strong>Última atualização: junho de 2026</strong></p><br><p>Ao acessar e utilizar o Aplicativo TV Livre, você concorda com os presentes Termos de Uso. Leia atentamente antes de prosseguir.</p><br><p><strong>1. Acesso ao Serviço</strong><br>O acesso ao Aplicativo TV Livre é concedido mediante pagamento único, conforme valor vigente no momento da compra. O acesso é pessoal e intransferível.</p><br><p><strong>2. Uso Permitido</strong><br>O aplicativo destina-se exclusivamente ao uso pessoal e doméstico. É vedada qualquer forma de redistribuição, revenda ou compartilhamento não autorizado do acesso.</p><br><p><strong>3. Disponibilidade</strong><br>O serviço é fornecido no estado em que se encontra. Nos reservamos o direito de realizar manutenções, atualizações ou alterações sem aviso prévio.</p><br><p><strong>4. Propriedade Intelectual</strong><br>Todo o conteúdo disponibilizado é protegido por direitos autorais. O uso indevido pode sujeitar o usuário às penalidades previstas em lei.</p><br><p><strong>5. Limitação de Responsabilidade</strong><br>O Aplicativo TV Livre não se responsabiliza por danos diretos ou indiretos decorrentes do uso ou impossibilidade de uso do serviço.</p><br><p><strong>6. Alterações nos Termos</strong><br>Estes termos podem ser atualizados a qualquer momento. O uso contínuo do serviço implica aceitação das alterações.</p>'
+  },
+  privacidade: {
+    title: 'Política de Privacidade',
+    body: '<p><strong>Última atualização: junho de 2026</strong></p><br><p>O Aplicativo TV Livre respeita sua privacidade e está comprometido com a proteção dos seus dados pessoais, em conformidade com a Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018).</p><br><p><strong>1. Dados Coletados</strong><br>Coletamos apenas os dados necessários para a prestação do serviço: nome, e-mail e dados de pagamento processados por plataformas terceiras seguras.</p><br><p><strong>2. Finalidade</strong><br>Seus dados são utilizados exclusivamente para: entrega do acesso adquirido, suporte ao cliente e comunicações relacionadas ao serviço.</p><br><p><strong>3. Compartilhamento</strong><br>Não vendemos, alugamos ou compartilhamos seus dados com terceiros, exceto quando necessário para a execução do serviço ou exigido por lei.</p><br><p><strong>4. Segurança</strong><br>Adotamos medidas técnicas e organizacionais para proteger seus dados contra acesso não autorizado, perda ou destruição.</p><br><p><strong>5. Seus Direitos</strong><br>Você tem direito de acessar, corrigir ou solicitar a exclusão dos seus dados a qualquer momento, mediante solicitação ao nosso suporte.</p><br><p><strong>6. Contato</strong><br>Para exercer seus direitos ou tirar dúvidas sobre esta política, entre em contato pelo suporte disponível 24/7.</p>'
+  },
+  reembolso: {
+    title: 'Política de Reembolso',
+    body: '<p><strong>Última atualização: junho de 2026</strong></p><br><p>Nossa política de reembolso é elaborada para garantir sua satisfação e segurança na compra.</p><br><p><strong>1. Prazo de Reembolso</strong><br>Você tem até 7 (sete) dias corridos após a compra para solicitar o reembolso integral, conforme o Código de Defesa do Consumidor (Art. 49 da Lei nº 8.078/1990).</p><br><p><strong>2. Como Solicitar</strong><br>Para solicitar o reembolso, entre em contato com nosso suporte informando o e-mail utilizado na compra e o comprovante de pagamento.</p><br><p><strong>3. Processamento</strong><br>O reembolso será processado em até 5 dias úteis após a aprovação da solicitação, retornando pelo mesmo meio de pagamento utilizado.</p><br><p><strong>4. Exceções</strong><br>Solicitações realizadas após o prazo de 7 dias não serão aceitas, exceto em casos de comprovada falha técnica do serviço.</p><br><p><strong>5. Suporte</strong><br>Nossa equipe está disponível 24/7 para auxiliar em qualquer questão relacionada ao reembolso.</p>'
+  },
+  contato: {
+    title: 'Contato',
+    body: '<p>Estamos disponíveis para atendimento 24 horas por dia, 7 dias por semana.</p><br><p><strong>Suporte ao Cliente</strong><br>Para dúvidas sobre instalação, configuração ou uso do aplicativo, acione nosso suporte pelo canal oficial informado após a compra.</p><br><p><strong>Solicitações LGPD</strong><br>Para exercer seus direitos relacionados à proteção de dados pessoais (acesso, correção, exclusão), entre em contato pelo mesmo canal de suporte, identificando sua solicitação como "LGPD".</p><br><p><strong>Tempo de Resposta</strong><br>Nossa equipe responde em menos de 5 minutos durante o horário comercial e em até 30 minutos fora desse período.</p><br><p><strong>Aplicativo TV Livre</strong><br>CNPJ e demais informações disponíveis mediante solicitação ao suporte.</p>'
+  }
+};
+
+function openModal(type) {
+  var data = modalContent[type];
+  document.getElementById('modal-title').textContent = data.title;
+  document.getElementById('modal-body').innerHTML = data.body;
+  var overlay = document.getElementById('modal-overlay');
+  overlay.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('modal-overlay').style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+document.getElementById('modal-overlay').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
+</script>
 
 
 <script>
